@@ -1,0 +1,457 @@
+/* Adding styling to all body elements */
+body {
+    font-family: Arial, sans-serif; /* Setting the font family for the entire body */
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    box-sizing: border-box; /* Ensuring padding and border are included in the element's total width and height */
+    min-width: 344px; /* Setting a minimum width for the body */
+}
+
+/* Styling the header and footer */
+header, footer {
+    background-color: #ffffff; /* Setting background color to white */
+    color: rgb(16, 157, 0); /* Setting text color */
+    text-align: center; /* Centering text */
+}
+
+/* Styling the divs with class container */
+.container {
+    max-width: 1200px; /* Setting maximum width */
+    margin: 0 auto; /* Centering the container horizontally */
+}
+
+/* Header Section styling ------------------------------------------------------------------------------------- */
+header {
+    position: sticky; /* Making the header sticky to the top */
+    top: 0; /* Positioning at the top */
+    z-index: 10; /* Ensuring the header is on top of other elements */
+    max-height: 122px; /* Setting maximum height */
+    border-bottom: 2px solid rgb(16, 157, 0); /* Adding a bottom border */
+}
+
+/* Styling the header navigation system */
+header #Nav_bar a {
+    color: rgb(16, 157, 0); /* Setting link color */
+    margin: 0 10px; /* Adding horizontal margin */
+    text-decoration: none; /* Removing underline from links */
+}
+
+/* Making the navigation responsive */
+header #Nav_bar a:hover {
+    border-bottom: 2px solid rgb(16, 157, 0); /* Adding a bottom border on hover */
+}
+
+/* Making both the container type elements display flex to make it responsive */
+header div.container, #Nav_bar {
+    display: flex; /* Setting display to flex */
+    flex-wrap: wrap; /* Allowing elements to wrap */
+    justify-content: center; /* Centering elements horizontally */
+    align-items: center; /* Centering elements vertically */
+}
+
+/* Make the content in the header's div container have space in between */
+header div.container {
+    justify-content: space-between; /* Distributing items evenly */
+    background-color: white; /* Setting background color to white */
+}
+
+/* Making a border appear at the bottom of the container below as the header's border disappears at this specific width */
+@media (max-width: 829px) {
+    header div.container {
+        border-bottom: 2px solid rgb(16, 157, 0); /* Adding a bottom border */
+    }
+    header {
+        border: none; /* Removing the header border */
+    }
+}
+
+/* Style the title of the webpage */
+header div.container h1 {
+    text-align: left; /* Aligning text to the left */
+    display: block; /* Setting display to block */
+}
+
+/* Style the webpage header navigation links */
+header div.container #Nav_bar a {
+    display: block; /* Setting display to block */
+    width: max-content; /* Setting width to the content's maximum width */
+}
+
+/* Logo image container ------------------------------------------- */
+#Logo-container {
+    margin: 0px 0px 20px 0px; /* Setting margin */
+    display: block; /* Setting display to block */
+    width: 100px; /* Setting width */
+    height: 100px; /* Setting height */
+    background-color: darkgreen; /* Setting background color */
+    border-bottom-left-radius: 100px; /* Setting bottom-left border radius */
+    border-bottom-right-radius: 100px; /* Setting bottom-right border radius */
+    overflow: hidden; /* Hiding overflow */
+}
+
+/* Styling the logo image */
+#logo {
+    width: 100%; /* Setting width to 100% */
+    height: 100%; /* Setting height to 100% */
+    object-fit: cover; /* Covering the container */
+}
+
+/* Menu button */
+#menubtn {
+    display: none; /* Hiding the menu button by default */
+}
+
+/* Making the menu button responsive */
+#menubtn:hover {
+    font-weight: bold; /* Making font bold on hover */
+    border: 2px solid rgb(16, 157, 0); /* Adding a border on hover */
+}
+
+/* Menu button that appears at device width 768px */
+@media (max-width: 768px) {
+    #Nav_bar {
+        display: none; /* Hiding the navigation bar */
+    }
+    #menubtn {
+        display: block; /* Showing the menu button */
+        background-color: #ffffff; /* Setting background color */
+        color: rgb(16, 157, 0); /* Setting text color */
+        border: none; /* Removing border */
+        padding: 10px 20px; /* Adding padding */
+        cursor: pointer; /* Changing cursor to pointer */
+    }
+}
+
+/* Dropdown */
+#dropdown {
+    display: none; /* Hiding the dropdown by default */
+}
+
+/* Dropdown content styling */
+.dropdown-content a {
+    display: block; /* Setting display to block */
+    text-decoration: none; /* Removing underline */
+    color: rgb(16, 157, 0); /* Setting text color */
+    background-color: rgba(255, 255, 255, 0.925); /* Setting background color */
+}
+
+/* Making dropdown content responsive */
+.dropdown-content a:hover {
+    background-color: rgb(16, 157, 0); /* Changing background color on hover */
+    color: #ffffff; /* Changing text color on hover */
+    font-weight: bold; /* Making font bold on hover */
+}
+
+/* Footer content styling ------------------------------------------------------------------------------- */
+footer {
+    color: white; /* Setting text color */
+    border-top: 2px solid rgb(16, 157, 0); /* Adding top border */
+    background-color: rgb(16, 157, 0); /* Setting background color */
+}
+
+#footer-content p {
+    margin: 0; /* Removing margin */
+}
+
+#footer-content {
+    padding: 10px; /* Adding padding */
+    display: flex; /* Setting display to flex */
+    flex-wrap: wrap; /* Allowing elements to wrap */
+    justify-content: flex-start; /* Aligning items to the start */
+}
+
+#footer-content a {
+    text-decoration: none; /* Removing underline */
+    color: white; /* Setting text color */
+}
+
+#footer-links a {
+    display: block; /* Making the links display as block */
+}
+
+/* Footer logo container styling */
+#footerlogo {
+    height: 140px; /* Setting height */
+    width: 140px; /* Setting width */
+    margin: 35px 5px; /* Setting margin */
+}
+
+/* Styling the logo */
+#footerlogo img {
+    width: 100%; /* Setting width to 100% */
+    height: 100%; /* Setting height to 100% */
+    object-fit: cover; /* Covering the container */
+}
+
+/* Styling the footer slogan */
+#footerSlogan {
+    width: 40%; /* Setting width */
+    height: fit-content; /* Setting height to fit content */
+    text-align: justify; /* Justifying text */
+    margin: 15px; /* Setting margin */
+}
+
+/* Styling the footer links section */
+#footer-links {
+    padding: 0px 20px; /* Setting padding */
+    margin: 15px; /* Setting margin */
+    width: 20%; /* Setting width */
+    text-align: left; /* Aligning text to the left */
+    border-left: 2px solid white; /* Adding left border */
+}
+
+/* Styling the contact div */
+#contact {
+    width: 15%; /* Setting width */
+    height: fit-content; /* Setting height to fit content */
+}
+
+#contact h3 {
+    text-align: right; /* Aligning text to the right */
+}
+
+/* Styling the SVGs */
+#contact svg {
+    display: inline-block; /* Setting display to inline-block */
+    fill: white; /* Setting fill color */
+}
+
+/* Styling the SVGs in the Svg-container div */
+#Svg-container {
+    text-align: right; /* Aligning text to the right */
+}
+
+/* Styling the bottom content section of the footer */
+#bottom-content {
+    width: 100%; /* Setting width to 100% */
+}
+
+/* Making the footer responsive to different device screen sizes */
+@media (max-width: 1026px) {
+    #contact {
+        width: 100%; /* Setting width to 100% */
+        text-align: center; /* Centering text */
+        margin: 10px 0; /* Setting margin */
+        border-left: none; /* Removing left border */
+    }
+}
+
+@media (max-width: 768px) {
+    #footer-content {
+        flex-direction: column; /* Making the content appear in one column */
+        align-items: center; /* Centering items */
+    }
+    #footerSlogan,
+    #footer-links,
+    #contact,
+    #bottom-content {
+        width: 100%; /* Making the content take up 100% of the screen width */
+        text-align: center; /* Centering text */
+        margin: 10px 0; /* Setting margin */
+        border-left: none; /* Removing left border */
+    }
+    #footer-links {
+        border-top: 2px solid white; /* Adding top border */
+    }
+    #footer-links a {
+        margin-top: 10px; /* Adding top margin */
+    }
+    #contact h3,
+    #Svg-container {
+        text-align: center; /* Centering text */
+    }
+    #Svg-container {
+        display: flex; /* Setting display to flex */
+        justify-content: center; /* Centering items horizontally */
+    }
+    #footer-links {
+        padding: 0; /* Removing padding */
+    }
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* Styling the main-content heading and image of content page 01 */
+#main-content {
+    position: relative; /* Setting position to relative */
+    margin: 0; /* Removing margin */
+    width: 100%; /* Setting width to 100% */
+    height: 400px; /* Setting height */
+    display: flex; /* Setting display to flex */
+    justify-content: center; /* Centering items horizontally */
+    align-items: center; /* Centering items vertically */
+    color: rgb(243, 255, 78); /* Setting text color */
+    border-bottom: 2px solid rgb(16, 157, 0); /* Adding bottom border */
+}
+
+/* main-content h1 styling */
+#main-content h1 {
+    margin: 0; /* Removing margin */
+    position: absolute; /* Setting position to absolute */
+    top: 50%; /* Positioning at 50% from the top */
+    left: 50%; /* Positioning at 50% from the left */
+    transform: translate(-50%, -50%); /* Centering the text both vertically and horizontally */
+    z-index: 1; /* Ensuring the text is above the image */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adding a smooth shadow */
+    text-align: center; /* Centering text */
+}
+
+/* main-content image styling */
+.mainImg {
+    width: 100%; /* Setting width to 100% */
+    height: 100%; /* Setting height to 100% */
+    object-fit: cover; /* Covering the container */
+    filter: brightness(70%); /* Setting brightness */
+    transition: filter 0.5s ease; /* Adding transition for smooth changes */
+}
+
+/* main-content image responsive styling */
+.mainImg:hover {
+    filter: brightness(50%); /* Reducing brightness of the image */
+}
+
+/* Styling the first content available inside div with class "content". This section contains the introductory information on how to protect the life on land. */
+.content {
+    width: 100%; /* Setting width to 100% */
+    height: fit-content; /* Setting height to fit content */
+    display: flex; /* Setting display to flex */
+    flex-wrap: wrap; /* Allowing elements to wrap */
+    margin-bottom: 20px; /* Adding bottom margin */
+    margin-top: 5px; /* Adding top margin */
+    justify-content: space-evenly; /* Distributing items evenly */
+    padding: 0; /* Removing padding */
+}
+
+/* Styling the first content's information content */
+.infoSection {
+    margin: 5px 0; /* Setting vertical margin */
+    width: 600px; /* Setting width */
+    height: 400px; /* Setting height */
+    background-color: rgb(255, 255, 255); /* Setting background color */
+    display: flex; /* Setting display to flex */
+    justify-content: center; /* Centering items horizontally */
+    align-items: center; /* Centering items vertically */
+    flex-flow: column; /* Arranging items in a column */
+    padding: 2%; /* Adding padding */
+    box-sizing: border-box; /* Including padding and border in the element's total width and height */
+    overflow-y: auto; /* Adding vertical scroll if needed */
+    color: rgb(16, 157, 0); /* Setting text color */
+}
+
+/* Styling the first content's image container */
+.imgSection {
+    margin: 5px 0; /* Setting vertical margin */
+    width: 600px; /* Setting width */
+    height: 400px; /* Setting height */
+    background-color: chartreuse; /* Setting background color */
+    border-radius: 10px; /* Setting border radius */
+    overflow: hidden; /* Hiding overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.432); /* Adding box shadow */
+}
+
+/* Styling the first content's image content */
+.imgSection img {
+    width: 100%; /* Setting width to 100% */
+    height: 100%; /* Setting height to 100% */
+    object-fit: cover; /* Covering the container */
+    transition: transform 0.3s ease-in-out; /* Adding transition for smooth changes */
+}
+
+/* Styling to make the image container responsive */
+.imgSection:hover img {
+    transform: scale(1.2); /* Scaling the images to give a zoom effect when hovered */
+}
+
+/* Styling the second content available inside div with class "content2". The section contains inspirational success stories. */
+.content2 {
+    width: 100%; /* Setting width to 100% */
+    height: fit-content; /* Setting height to fit content */
+    display: flex; /* Setting display to flex */
+    flex-wrap: wrap; /* Allowing elements to wrap */
+    margin-bottom: 20px; /* Adding bottom margin */
+    margin-top: 5px; /* Adding top margin */
+    justify-content: space-evenly; /* Distributing items evenly */
+    padding: 0; /* Removing padding */
+}
+
+/* Styling the div with ID "Advice" that contains the information on how the user can contribute. */
+#Advice {
+    margin-bottom: 15px; /* Adding bottom margin */
+    background-color: rgb(102, 169, 25); /* Setting background color */
+    padding: 10px; /* Adding padding */
+}
+
+#Advice h1 {
+    text-align: center; /* Centering text */
+    margin: 15px auto; /* Setting margin */
+    color: white; /* Setting text color */
+}
+
+/* Styling the containers that store two containers for storing information on how users can contribute. */
+.content3 {
+    width: 100%; /* Setting width to 100% */
+    height: fit-content; /* Setting height to fit content */
+    display: flex; /* Setting display to flex */
+    flex-wrap: wrap; /* Allowing elements to wrap */
+    margin-bottom: 20px; /* Adding bottom margin */
+    margin-top: 5px; /* Adding top margin */
+    justify-content: space-evenly; /* Distributing items evenly */
+}
+
+/* Styling the two containers that store information on how the viewers or users can contribute to protect life on land */
+.info-to-help1, .info-to-help2 {
+    margin: 10px; /* Setting margin */
+    color: white; /* Setting text color */
+    width: 550px; /* Setting width */
+    height: 200px; /* Setting height */
+    text-align: justify; /* Justifying text */
+    padding: 2%; /* Adding padding */
+    box-sizing: border-box; /* Including padding and border in the element's total width and height */
+    overflow-y: auto; /* Adding vertical scroll if needed */
+    border-radius: 10px; /* Setting border radius */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding text shadow */
+    transition: box-shadow 0.3s ease; /* Adding transition for smooth changes */
+}
+
+/* Styling the main container that stores important links that the user can explore to gain more information on how to protect life on land */
+.important-links {
+    margin-top: 15px; /* Adding top margin */
+    width: 95%; /* Setting width */
+    margin: 15px auto; /* Setting margin */
+    border-radius: 10px; /* Setting border radius */
+}
+
+/* Styling the sub-container that stores important links that the user can explore to gain more information on how to protect life on land */
+.important-links #links {
+    padding: 20px; /* Adding padding */
+    text-align: center; /* Centering text */
+    font-weight: bold; /* Making text bold */
+    color: rgb(16, 157, 0); /* Setting text color */
+}
+
+/* Styling the disclaimer text */
+#links span {
+    color: rgb(16, 157, 0); /* Setting text color */
+    display: block; /* Setting display to block */
+    font-weight: bold; /* Making text bold */
+}
+
+/* Styling the links provided in the "#links" div */
+#links a {
+    text-decoration: underline; /* Adding underline */
+    color: rgb(16, 157, 0); /* Setting text color */
+    text-shadow: none; /* Removing text shadow */
+}
+
+/* Making all the content related to text responsive */
+.inspiration-info:hover, .info-to-help1:hover, .info-to-help2:hover {
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.648); /* Adding box shadow on hover */
+}
+
+/* Underline class styling */
+.underline {
+    text-decoration: underline; /* Adding underline */
+    text-align: center; /* Centering text */
+}
+
+

@@ -1,0 +1,143 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0c0c0c;
+    
+    display: flex;/*1*/
+   /* background: whitesmoke;*/
+    flex-direction: column;/*2*/
+    align-items:center;
+    justify-content: center;
+    min-height: 100vh;/*3*/
+    min-width: 538px;
+}
+
+#main-content-holder{
+    width:100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    text-align: center;
+    background-image:url(https://i.pinimg.com/564x/69/f2/c5/69f2c510c40b9ac18e735f4c18b56938.jpg) ;
+    background-size:cover;
+    background-clip:text;
+   /*https://i.pinimg.com/564x/82/37/b6/8237b6ff21f1a881ee48a646f7925833.jpg*/
+    color:transparent;
+    font-size: 40px;
+    margin: 20px 0;
+    position: sticky;
+}
+
+.image-viewer{ /*1*/
+    /* width: 80%; */
+    max-width: 800px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 2px solid #0a0a0a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+.image-viewer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-container{
+    position: relative;
+    display:inline-block
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(119, 114, 114, 0.8);
+    color:white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.image-container:hover .card {
+    opacity: 1;
+    pointer-events: auto;
+    bottom:auto
+}
+
+
+
+.thumbnails-wrapper {
+    overflow: hidden;
+    width:300px;
+    display:flex;
+    justify-content: center;
+}
+
+.thumbnail-slider {
+    /* width: 80%; */
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.thumbnail img:hover {
+    transform: scale(1.1);
+}
+
+.prev,  .next{
+    border: none;
+    background-color: rgb(65, 112, 57);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin:0 10px;
+    border-radius: 8px;
+   
+}
+.prev:hover, .next:hover{
+    background-color: #e5d7a6;
+}
+

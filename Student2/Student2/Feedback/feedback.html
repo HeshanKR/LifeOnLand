@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="remove1.1.png" type="image/png">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <form id="feedbackForm" method = "post">
+        <fieldset>
+            <h2>Feedback Form</h2>
+            <!-- asking the user to enter his/her name -->
+            <label>Enter your Name: </label>
+            <input type="text" id="name" name="user-name" placeholder="Enter your name"><br> 
+
+            <!-- asking the user to enter his/her email -->
+            <label>Enter your Email: </label>
+            <input type="email" id="email" name="user-email" placeholder="Eg: abc123@gmail.com"><br>
+
+            <!-- asking the user whether its his/her first time visiting -->
+            <label>Is this your first time visiting? </label><br><br>
+            <input type="radio" id="visit1" name="visit" value="Yes"><label for="visit1">Yes</label>
+            <input type="radio" id="visit2" name="visit" value="No"><label for="visit2">No</label><br>
+
+            <!-- asking the user to rate our website from 1 to 10 -->
+            <p>How is your experience with us? Please provide a rating from 1 to 10 where 1 is "Not satisfied" and 10 being "Extremely Satisfied":</p> <br>
+            <div class = "rating">
+                <input type="radio" id="rate1" name="rate" value="1"><label for="rate1">1</label>
+                <input type="radio" id="rate2" name="rate" value="2"><label for="rate2">2</label>
+                <input type="radio" id="rate3" name="rate" value="3"><label for="rate3">3</label>
+                <input type="radio" id="rate4" name="rate" value="4"><label for="rate4">4</label>
+                <input type="radio" id="rate5" name="rate" value="5"><label for="rate5">5</label>
+                <input type="radio" id="rate6" name="rate" value="6"><label for="rate6">6</label>
+                <input type="radio" id="rate7" name="rate" value="7"><label for="rate7">7</label>
+                <input type="radio" id="rate8" name="rate" value="8"><label for="rate8">8</label>
+                <input type="radio" id="rate9" name="rate" value="9"><label for="rate9">9</label>
+                <input type="radio" id="rate10" name="rate" value="10"><label for="rate10">10</label><br>
+            </div>
+
+            <!-- asking the user whether the information provided in the website is informative -->
+            <label>Would you recommend this website as a reliable source of information?</label><br><br>
+            <input type="radio" id="recommend1" name="recommend" value="Yes"><label for="recommend1">Yes</label>
+            <input type="radio" id="recommend2" name="recommend" value="No"><label for="recommend2">No</label><br>
+
+            <!-- asking the user whether they need updates and news -->
+            <label>Would you like to receive updates about the website and events?</label><br><br>
+            <select id="updates">
+                <option value="email">Yes - via Email</option>
+                <option value="sms">Yes - via SMS</option>
+                <option value="no">No</option>
+            </select><br>
+
+            <!-- making the mobile number request appear if user chooses via SMS from the previous drop down menu -->
+            <div class="via-SMS" id="viaSMS">
+                <label>Enter your mobile number:</label>
+                <input type="text" id="mobile" name="user-tel"><br>
+            </div>
+
+            <!-- asking the user to for feedback regardign the website -->
+            <label>Please give us your feedback: </label><br><br>
+            <textarea name="feedback" id="feedback" rows="5" placeholder="Type your feedback in here"></textarea><br>
+
+            <!-- allows the user to enter preview mode -->
+            <input type="submit" value="Preview & Submit">
+
+            <!-- allows the user to clear the form -->
+            <input type="reset" value="Clear">
+        </fieldset>
+    </form>
+
+    <!-- creating the preview section -->
+    <div id="previewSection">
+        <h2>Preview Your Feedback</h2>
+        <p><strong>Name:</strong> <span id="previewName"></span></p><br>
+        <p><strong>Email:</strong> <span id="previewEmail"></span></p><br>
+        <p><strong>First Time Visit:</strong> <span id="previewVisit"></span></p><br>
+        <p><strong>Experience Rating:</strong> <span id="previewRate"></span></p><br>
+        <p><strong>Recommendation:</strong> <span id="previewRecommend"></span></p><br>
+        <p><strong>Receive Updates:</strong> <span id="previewUpdates"></span></p><br>
+        <p id="previewMobileSection" style="display:none;"><strong>Mobile Number:</strong> <span id="previewMobile"></span></p><br>
+        <p><strong>Feedback:</strong> <span id="previewFeedback"></span></p><br>
+        <button id="editButton">Edit</button>
+        <button id="confirmButton">Confirm</button>
+    </div>
+
+    <!-- thank you message after submitting -->
+    <div id="responseMessage"></div>
+    <script src="feedback.js"></script>
+
+</body>
+</html>

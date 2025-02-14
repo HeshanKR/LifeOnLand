@@ -1,0 +1,154 @@
+/* Import the Poppins font family from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset padding, margin, and box-sizing for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font family */
+}
+
+/* Set background color for the body */
+body {
+    background-color: #e8f5e9; /* Light green background */
+}
+
+/* Style the main team section */
+.team_section {
+    width: 100%; /* full width */
+    padding: 50px 0; /* vertical padding */
+    background-color: #c8e6c9; /* light green background */
+    display: flex; /* use flexbox */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    flex-direction: column; /* stack elements vertically */
+}
+
+/* Style the container */
+.container {
+    max-width: 100%; /* full width */
+    padding: 0 40px; /* hrizontal padding */
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+/* Style the header in the container */
+.container h1 {
+    font-size: 2.5rem; /* large font size */
+    margin-bottom: 50px; /* bottom margin */
+    text-align: center; /* center text */
+    position: relative; /* relative positioning */
+    display: inline-block; /* inline block display */
+    padding: 10px 0; /* vertical padding */
+    color: #000000; /* black color */
+    font-weight: bold; /* bold text */
+}
+
+/* Add a background line before the header */
+.container h1::before {
+    content: ''; /* epty content to create the line */
+    position: absolute; /* position it absolutely within the header */
+    left: 50%; /* center horizontally */
+    top: 50%; /* center vertically */
+    width: 100%; /* full width of the header */
+    height: 2px; /* 2 pixels in height */
+    background: rgba(76, 175, 80, 0.1); /* light green color with opacity */
+    z-index: 1; /* layer it behind the text */
+    transform: translate(-50%, -50%) rotate(45deg); /* center and rotate */
+}
+
+/* Add a bottom border to the header */
+.container h1::after {
+    content: ''; /* empty content to create the line */
+    position: absolute; /* position it absolutely within the header */
+    left: 0; /* align to the left edge */
+    right: 0; /* align to the right edge */
+    bottom: 0; /* align to the bottom edge */
+    height: 2px; /* 2 pixels in height */
+    background: #000000; /* black color */
+}
+
+
+/* Adjust top position of the background line */
+.container h1::before {
+    top: -2px;
+}
+
+/* Adjust bottom position of the border */
+.container h1::after {
+    bottom: -2px;
+}
+
+/* Style the wrapper for team members */
+.team_wrapper {
+    display: flex; /* use flexbox */
+    flex-wrap: nowrap; /* no wrapping */
+    justify-content: flex-start; /* align items to the start */
+    align-items: flex-start; /* align items to the start */
+    gap: 30px; /* gap between items */
+    overflow-x: auto; /* horizontal scrolling */
+    padding: 40px 0; /* vertical padding */
+    scroll-snap-type: x mandatory; /* snap scrolling */
+}
+
+/* Style each team member */
+.team_member {
+    flex: 0 0 auto; /* fixed size */
+    width: 400px; /* fixed width */
+    background-color: #ffffff; /* white background */
+    border-radius: 15px; /* rounded corners */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    overflow: hidden; /* hide overflow */
+    text-align: center; /* center text */
+    transition: transform 0.3s, margin-top 0.3s; /* smooth transitions */
+    scroll-snap-align: center; /* center alignment */
+}
+
+/* Adjust margin-top for specific team members */
+.team_member:nth-child(2),
+.team_member:nth-child(4) {
+    margin-top: 40px;
+}
+
+/* Adjust hover effect for specific team members */
+.team_member:nth-child(2):hover,
+.team_member:nth-child(4):hover {
+    transform: translate(-10px); /* move left */
+    margin-top: 30px; /* adjust margin */
+}
+
+/* Hover effect for all team members */
+.team_member:hover {
+    transform: translateY(-10px); /* move up */
+}
+
+/* Style for member images */
+.member_image img {
+    width: 100%; /* full width */
+    height: 500px; /* fixed height */
+    object-fit: cover; /* cover the container */
+    border-bottom: 2px solid #a5d6a7; /* green bottom border */
+    transition: all 0.8s ease; /* smooth transition */
+}
+
+/* Style for member information */
+.member_info {
+    padding: 20px; /* padding */
+}
+
+/* Style for member names */
+.member_info h2 {
+    font-size: 1.5rem; /* large font size */
+    margin-bottom: 10px; /* bottom margin */
+    color: #2e7d32; /* dark green color */
+}
+
+/* Style for member descriptions */
+.member_info p {
+    font-size: 1rem; /* standard font size */
+    color: #4caf50; /* green color */
+}

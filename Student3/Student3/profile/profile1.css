@@ -1,0 +1,409 @@
+/* Adding styling to all body elements */
+body {
+    font-family: Arial, sans-serif; /* Setting the font family for the body */
+    margin: 0; /* Removing the default margin */
+    padding: 0; /* Removing the default padding */
+    box-sizing: border-box; /* Setting box-sizing to border-box */
+    min-width: 344px; /* Setting a minimum width for the body */
+    background: url(forest.png) no-repeat center center fixed; /* Setting the background image, no repeat, centered, and fixed */
+    background-size: cover; /* Making the background cover the entire area */
+}
+
+/* Styling the header and footer */
+header, footer {
+    background-color: #ffffff; /* Setting the background color to white */
+    color: rgb(16, 157, 0); /* Setting the text color to green */
+    text-align: center; /* Center-aligning the text */
+}
+
+/* Styling the divs with class container */
+.container {
+    max-width: 1200px; /* Setting a maximum width */
+    margin: 0 auto; /* Centering the container */
+}
+
+/* Styling the h1 elements within container class */
+.container h1 {
+    font-weight: 700; /* Setting font weight to bold */
+    font-size: 30px; /* Setting the font size */
+}
+
+/* Header Section Styling */
+/* Styling the header section */
+header {
+    position: sticky; /* Making the header sticky to the top */
+    top: 0; /* Positioning it at the top */
+    z-index: 10; /* Ensuring the header is on top of other elements */
+    max-height: 122px; /* Setting a maximum height */
+    border-bottom: 2px solid rgb(16, 157, 0); /* Adding a bottom border */
+}
+
+/* Styling the header navigation links */
+#Nav_bar a {
+    color: rgb(16, 157, 0); /* Setting the text color to green */
+    margin: 0 10px; /* Adding margin around the links */
+    text-decoration: none; /* Removing text decoration */
+    transition: border-bottom 0.1s ease; /* Adding a transition effect */
+}
+
+/* Adding hover effect to navigation links */
+#Nav_bar a:hover {
+    border-bottom: 2px solid rgb(16, 157, 0); /* Adding a bottom border on hover */
+}
+
+/* Making header container and navigation bar flexible and responsive */
+header div.container, #Nav_bar {
+    display: flex; /* Using flexbox for layout */
+    flex-wrap: wrap; /* Allowing elements to wrap */
+    justify-content: center; /* Centering the elements */
+    align-items: center; /* Aligning items to the center */
+}
+
+/* Making space between items in header's container */
+header div.container {
+    justify-content: space-between; /* Distributing space between items */
+}
+
+/* Adjusting border for smaller screens */
+@media (max-width: 829px) {
+    header div.container {
+        border-bottom: 2px solid rgb(16, 157, 0); /* Adding bottom border */
+    }
+    header {
+        border: none; /* Removing the header border */
+    }
+}
+
+/* Aligning header title to the left */
+header div.container h1 {
+    text-align: left; /* Aligning text to the left */
+}
+
+/* Styling navigation links in header */
+header div.container #Nav_bar a {
+    display: block; /* Displaying links as block elements */
+}
+
+/* Styling the logo container */
+#Logo-container {
+    margin: 0px 0px 20px 0px; /* Adding margin to the container */
+    display: block; /* Displaying as block element */
+    width: 100px; /* Setting width */
+    height: 100px; /* Setting height */
+    background-color: darkgreen; /* Setting background color */
+    border-bottom-left-radius: 100px; /* Adding border radius to bottom left */
+    border-bottom-right-radius: 100px; /* Adding border radius to bottom right */
+    overflow: hidden; /* Hiding overflow */
+}
+
+/* Styling the logo image */
+#logo {
+    width: 100%; /* Setting width to 100% */
+    height: 100%; /* Setting height to 100% */
+    object-fit: cover; /* Ensuring the image covers the container */
+}
+
+/* Styling the menu button */
+#menubtn {
+    display: none; /* Hiding the menu button by default */
+    transition: border 0.1s ease; /* Adding transition effect */
+}
+
+/* Adding hover effect to menu button */
+#menubtn:hover {
+    font-weight: bold; /* Making text bold on hover */
+    border: 2px solid rgb(16, 157, 0); /* Adding a border on hover */
+}
+
+/* Making menu button visible on smaller screens */
+@media (max-width: 768px) {
+    #Nav_bar {
+        display: none; /* Hiding the navigation bar */
+    }
+
+    #menubtn {
+        display: block; /* Displaying the menu button */
+        background-color: #ffffff; /* Setting background color */
+        color: rgb(16, 157, 0); /* Setting text color */
+        border: none; /* Removing border */
+        padding: 10px 20px; /* Adding padding */
+        cursor: pointer; /* Changing cursor to pointer */
+    }
+}
+
+/* Dropdown styling */
+#dropdown {
+    display: none; /* Hiding the dropdown */
+}
+
+/* Styling dropdown content links */
+.dropdown-content a {
+    display: block; /* Displaying links as block elements */
+    text-decoration: none; /* Removing text decoration */
+    color: rgb(16, 157, 0); /* Setting text color */
+    background-color: rgba(255, 255, 255, 0.925); /* Setting background color */
+}
+
+/* Adding hover effect to dropdown links */
+.dropdown-content a:hover {
+    background-color: rgb(16, 157, 0); /* Changing background color on hover */
+    color: #ffffff; /* Changing text color on hover */
+    font-weight: bold; /* Making text bold on hover */
+}
+
+/* Styling the footer section */
+footer {
+    color: white; /* Setting text color to white */
+    border-top: 2px solid rgb(16, 157, 0); /* Adding top border */
+    background-color: rgb(16, 157, 0); /* Setting background color */
+}
+
+/* Styling footer content paragraphs */
+#footer-content p {
+    margin: 0; /* Removing margin */
+}
+
+/* Styling footer content container */
+#footer-content {
+    padding: 10px; /* Adding padding */
+    display: flex; /* Using flexbox for layout */
+    flex-wrap: wrap; /* Allowing elements to wrap */
+    justify-content: flex-start; /* Aligning items to the start */
+}
+
+/* Styling footer links */
+#footer-content a {
+    text-decoration: none; /* Removing text decoration */
+    color: white; /* Setting text color to white */
+}
+
+/* Making footer links display as block elements */
+#footer-links a {
+    display: block; /* Displaying links as block elements */
+}
+
+/* Styling the footer logo container */
+#footerlogo {
+    height: 140px; /* Setting height */
+    width: 140px; /* Setting width */
+    margin: 35px 5px; /* Adding margin */
+}
+
+/* Styling the logo image */
+#footerlogo img {
+    width: 100%; /* Setting width to 100% */
+    height: 100%; /* Setting height to 100% */
+    object-fit: cover; /* Ensuring the image covers the container */
+}
+
+/* Styling the footer slogan */
+#footerSlogan {
+    width: 40%; /* Setting width */
+    height: fit-content; /* Adjusting height to fit content */
+    text-align: justify; /* Justifying text */
+    margin: 15px; /* Adding margin */
+}
+
+/* Styling the footer links section */
+#footer-links {
+    padding: 0px 20px; /* Adding padding */
+    margin: 15px; /* Adding margin */
+    width: 20%; /* Setting width */
+    text-align: left; /* Aligning text to the left */
+    border-left: 2px solid white; /* Adding left border */
+}
+
+/* Styling the contact div */
+#contact {
+    width: 15%; /* Setting width */
+    height: fit-content; /* Adjusting height to fit content */
+}
+
+/* Aligning contact headers */
+#contact h3 {
+    text-align: right; /* Aligning text to the right */
+}
+
+/* Styling the SVG icons */
+#contact svg {
+    display: inline-block; /* Displaying SVGs as inline-block elements */
+    fill: white; /* Setting fill color to white */
+}
+
+/* Styling the SVG container */
+#Svg-container {
+    text-align: right; /* Aligning text to the right */
+}
+
+/* Styling the bottom content section of the footer */
+#bottom-content {
+    width: 100%; /* Setting width to 100% */
+}
+
+/* Adjusting footer for screens smaller than 1026px */
+@media (max-width: 1026px) {
+    #contact {
+        width: 100%; /* Setting width to 100% */
+        text-align: center; /* Center-aligning text */
+        margin: 10px 0; /* Adding margin */
+        border-left: none; /* Removing left border */
+    }
+}
+
+/* Adjusting footer for screens smaller than 768px */
+@media (max-width: 768px) {
+    #footer-content {
+        flex-direction: column; /* Displaying content in one column */
+        align-items: center; /* Center-aligning items */
+    }
+
+    #footerSlogan, 
+    #footer-links, 
+    #contact, 
+    #bottom-content {
+        width: 100%; /* Setting width to 100% */
+        text-align: center; /* Center-aligning text */
+        margin: 10px 0; /* Adding margin */
+        border-left: none; /* Removing left border */
+    }
+
+    #footer-links {
+        border-top: 2px solid white; /* Adding top border */
+    }
+
+    #footer-links a {
+        margin-top: 10px; /* Adding margin to top */
+    }
+
+    #contact h3, 
+    #Svg-container {
+        text-align: center; /* Center-aligning text */
+    }
+
+    #Svg-container {
+        display: flex; /* Using flexbox for layout */
+        justify-content: center; /* Center-aligning items */
+    }
+
+    #footer-links {
+        padding: 0; /* Removing padding */
+    }
+}
+
+/* Styling the main content */
+body {
+    background: url(forest.png) no-repeat center center fixed; /* Setting background image */
+    background-size: cover; /* Making background cover the entire area */
+}
+
+.container1 {
+    max-width: 600px; /* Setting maximum width */
+    margin: 20px auto; /* Adding margin and centering */
+    background-color: white; /* Setting background color to white */
+    border-radius: 10px; /* Adding border radius */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adding box shadow */
+}
+
+.user-profile {
+    padding: 20px; /* Adding padding */
+}
+
+h1 {
+    text-align: center; /* Center-aligning text */
+    margin-top: 0; /* Removing top margin */
+}
+
+#prompt-container {
+    margin-bottom: 20px; /* Adding bottom margin */
+}
+
+#user-input {
+    width: 100%; /* Setting width to 100% */
+    padding: 10px; /* Adding padding */
+    margin-bottom: 10px; /* Adding bottom margin */
+    box-sizing: border-box; /* Setting box-sizing to border-box */
+}
+
+.buttons {
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Justifying space between items */
+    margin-bottom: 20px; /* Adding bottom margin */
+}
+
+button {
+    padding: 10px 20px; /* Adding padding */
+    background-color: #007bff; /* Setting background color */
+    color: white; /* Setting text color to white */
+    border: none; /* Removing border */
+    border-radius: 5px; /* Adding border radius */
+    cursor: pointer; /* Changing cursor to pointer */
+}
+
+button:hover {
+    background-color: #0056b3; /* Changing background color on hover */
+}
+
+button:disabled {
+    background-color: #ccc; /* Setting background color for disabled button */
+    cursor: not-allowed; /* Changing cursor to not-allowed */
+}
+
+.progress-bar {
+    width: 100%; /* Setting width to 100% */
+    height: 20px; /* Setting height */
+    background-color: #e0e0e0; /* Setting background color */
+    border-radius: 10px; /* Adding border radius */
+    overflow: hidden; /* Hiding overflow */
+    margin-bottom: 20px; /* Adding bottom margin */
+}
+
+#progress-bar {
+    width: 0; /* Setting initial width */
+    height: 100%; /* Setting height to 100% */
+    background-color: #4CAF50; /* Setting background color */
+    text-align: center; /* Center-aligning text */
+    line-height: 20px; /* Setting line height */
+    color: white; /* Setting text color to white */
+    transition: width 0.3s ease-in-out; /* Adding transition effect */
+}
+
+.steps {
+    margin: 20px 0; /* Adding top and bottom margin */
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Justifying space between items */
+}
+
+.output {
+    margin: 20px 0; /* Adding top and bottom margin */
+    background-color: #f0f0f0; /* Setting background color */
+    padding: 12px; /* Adding padding */
+    border-radius: 10px; /* Adding border radius */
+}
+
+.modal {
+    display: none; /* Hiding the modal by default */
+    position: fixed; /* Fixing position */
+    z-index: 1; /* Setting z-index */
+    left: 0; /* Positioning to the left */
+    top: 0; /* Positioning to the top */
+    width: 100%; /* Setting width to 100% */
+    height: 100%; /* Setting height to 100% */
+    overflow: auto; /* Allowing overflow */
+    background-color: rgba(0,0,0,0.4); /* Setting background color with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Setting background color */
+    margin: 15% auto; /* Centering the modal */
+    padding: 20px; /* Adding padding */
+    border: 1px solid #888; /* Adding border */
+    width: 80%; /* Setting width to 80% */
+    max-width: 500px; /* Setting maximum width */
+    border-radius: 10px; /* Adding border radius */
+    text-align: center; /* Center-aligning text */
+}
+
+/* Adding border radius to menu button */
+#menubtn {
+    border-radius: 0; /* Removing border radius */
+}

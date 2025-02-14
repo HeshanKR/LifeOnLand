@@ -1,0 +1,61 @@
+* {
+    padding: 0; /* Remove padding from all elements */
+    margin: 0; /* Remove margin from all elements */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: sans-serif; /* Use sans-serif font for all elements */
+}
+
+body {
+    font-family: sans-serif; /* Use sans-serif font for the body */
+    margin: 0; /* Remove margin from the body */
+    padding: 0; /* Remove padding from the body */
+    background-image: url(img004.jpg); /* Set a background image for the body */
+    background-size: cover; /* Ensure the background image covers the entire body */
+}
+
+#specific-image {
+    width: 200px; /* Set the width of the specific image to 200 pixels */
+    height: auto; /* Maintain the aspect ratio of the image */
+    text-align: center; /* Center-align text inside the specific image container */
+    margin: 0 auto; /* Center the specific image container horizontally */
+}
+
+.container {
+    color: #fff; /* Set the text color to white */
+    background-color: rgba(18, 18, 18, 0.4); /* Set a semi-transparent black background */
+    width: 600px; /* Set the container width to 600 pixels */
+    padding: 50px; /* Add 50 pixels of padding inside the container */
+    margin: 50px auto; /* Add 50 pixels of margin on the top and bottom, and center the container horizontally */
+    border: 1px solid rgba(18, 18, 18, 0.2); /* Add a semi-transparent black border */
+    border-radius: 20px; /* Round the corners of the container */
+    backdrop-filter: blur(15px) saturate(120%); /* Apply a blur and saturation filter to the background */
+}
+
+.h1 {
+    text-align: center; /* Center-align text inside h1 */
+    font-family: sans-serif; /* Use sans-serif font for h1 */
+    margin: 30px; /* Add 30 pixels of margin around h1 */
+}
+
+.underline {
+    text-decoration: underline; /* Underline text with the underline class */
+}
+
+.p {
+    text-align: center; /* Center-align text inside p */
+    font-family: sans-serif; /* Use sans-serif font for p */
+    margin: 20px 0; /* Add 20 pixels of margin to the top and bottom of p */
+}
+
+.link {
+    color: rgb(218, 255, 30); /* Set the link text color to a light yellow-green */
+}
+
+a {
+    color: rgb(218, 255, 30); /* Set the anchor tag text color to a light yellow-green */
+    text-decoration: underline; /* Underline the anchor tag text */
+}
+
+a:hover {
+    text-decoration: underline; /* Ensure anchor tag text remains underlined when hovered */
+}

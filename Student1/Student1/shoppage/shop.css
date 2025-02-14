@@ -1,0 +1,815 @@
+/*Adding styling to all body elements*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 344px;
+}
+/*Styling the header and footer */
+header, footer {
+    background-color: #ffffff;
+    color: rgb(16, 157, 0);
+    text-align: center;
+}
+
+
+/*Styling the main tag container*/
+main {
+    padding: 2em;
+    background-color: #3a684b;
+}
+
+/*Styling the divs with class container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Header Section styling-------------------------------------------------------------------------------------*/
+header{
+    position: sticky;/*Making the header sticky to the top.*/
+    top: 0;
+    z-index: 1; /*Makes the header is on top of other elements */
+    max-height: 122px;
+    border-bottom: 2px solid rgb(16, 157, 0);
+}
+
+/*Styling the header navigation system*/
+header #Nav_bar a{
+    color: rgb(16, 157, 0);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/*Making the navigation responsive*/
+header #Nav_bar a:hover{
+    border-bottom: 2px solid rgb(16, 157, 0);
+}
+
+/*Making the both the container type elements display flex to make it responsive*/
+header div.container, #Nav_bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Make the content in the headers' div container have a space in between*/
+header div.container{
+    justify-content: space-between;
+    background-color: white;
+}
+
+/*Making a border appear at the bottom of the container below as the header's border disappear at this specific width.*/
+@media (max-width: 829px){
+    header div.container{
+        border-bottom: 2px solid rgb(16, 157, 0);
+    }
+    header{
+        border: none;
+    }
+}
+
+/* Style the Title of the webpage*/
+header div.container h1{
+    text-align: left;
+    display:block;
+} 
+
+/*Style the webpage header navigation links */
+header div.container #Nav_bar a{
+    display: block;
+    width: max-content;
+}
+/*Logo image container--------------------------------------------------------------------*/
+#Logo-container{
+    margin: 0px 0px 20px 0px;
+    display: block;
+    width:100px;
+    height: 100px;
+    background-color:darkgreen; 
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+}
+/*Making the logo cover the entire container allocated to it*/
+#logo{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Menu button that is made to appear when the device-screen width reaches the mobile width. Done inorder to replace the Nav_bar links content.*/
+#menubtn{
+    display: none;
+}
+
+/*Making  the menu button  responsive*/
+#menubtn:hover{
+    font-weight: bold;
+    border: 2px solid rgb(16, 157, 0);
+}
+
+/*Menu button that appears at device width 768px*/
+@media (max-width: 768px) {
+    #Nav_bar {
+        display: none; /*Hiding the Nav_bar and the contents inside it.*/
+    }
+
+    #menubtn {
+        display: block;
+        background-color: #ffffff;
+        color: rgb(16, 157, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer; /*Making the cursor to be a pointer*/
+    }
+
+}
+/*Dropdown create to replace the "Nav_bar" content when the width reaches mobile width*/
+#dropdown{
+    display: none;  /*Initially hidden*/
+}
+/*Dropdown content styling*/
+.dropdown-content a{
+        display:block;
+        text-decoration: none;
+        color: rgb(16, 157, 0);
+        background-color: rgba(255, 255, 255, 0.925);
+}
+
+/*Making dropdown content responsive*/
+.dropdown-content a:hover{
+    background-color:rgb(16, 157, 0);
+    color:#ffffff;
+    font-weight: bold;
+} 
+
+/*Footer content styling-------------------------------------------------------------------------------*/
+
+footer {
+    color: white;
+    border-top: 2px solid rgb(16, 157, 0);
+    background-color: rgb(16, 157, 0);
+}
+
+#footer-content p {
+    margin: 0;
+}
+
+#footer-content {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#footer-content a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-links a {
+    display: block; /*Making the links display as block*/
+}
+
+/*Footer logo container styling*/
+#footerlogo {
+    height: 140px;
+    width: 140px;
+    margin: 35px 5px;
+}
+
+/*Styling the logo*/
+#footerlogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Styling the footer slogan*/
+#footerSlogan {
+    width: 40%;
+    height: fit-content;
+    text-align: justify;
+    margin: 15px;
+}
+/*Styling the footer links section*/
+#footer-links {
+    padding: 0px 20px;
+    margin: 15px;
+    width: 20%;
+    text-align: left;
+    border-left: 2px solid white;
+}
+
+/*Styling the contact div*/
+#contact {
+    width: 15%;
+    height: fit-content;
+}
+
+#contact h3 {
+    text-align: right;
+}
+
+/*Styling the svgs */
+#contact svg {
+    display: inline-block;
+    fill: white;
+}
+
+/*Styling the svgs in the Svg-container div*/
+#Svg-container {
+    text-align: right;
+}
+
+/*Styling the bottom content section of the footer*/
+#bottom-content {
+    width: 100%;
+}
+
+/*Making the footer responsive to different device screen sizes*/
+
+@media (max-width: 1026px){
+    #contact{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        border-left: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #footer-content {
+        flex-direction: column; /*Making the content appear in one column*/
+        align-items: center;
+    }
+
+    #footerSlogan, 
+    #footer-links, 
+    #contact, 
+    #bottom-content {
+        width: 100%; /*Making the content take up 100% of the screen width*/
+        text-align: center;
+        margin: 10px 0;
+        border-left: none;
+    }
+
+    #footer-links{
+        border-top: 2px solid white;
+    }
+
+    #footer-links a{
+        margin-top: 10px;
+    }
+
+    #contact h3, 
+    #Svg-container {
+        text-align: center;
+    }
+
+    #Svg-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer-links {
+        padding: 0;
+    }
+}
+
+
+
+
+/* Shop menu styling --------------------------------------------------------------------------------------*/
+/*A Div is created to make a fake top to where the back to top button will return to in the webpage. */
+#faketop{
+    width: 100%; 
+    height: 200px; 
+    display:none;
+}
+/*Main container that will store the products that are to be sold at the Gaia Radiance store*/
+#shop{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures space between the items */
+    position: relative;
+}
+
+/* To align the shop items in the center at the device screen width of 323px.*/
+@media (max-width:323px) {
+    #shop{
+        padding: 0;
+    }
+}
+
+/* Align the content correctly in the center in a visible manner.*/
+@media (max-width:356px) {
+    .container{
+        padding:0;
+    }
+}
+
+/*Styling the product showcase--------------------------------------------*/
+#showcase{
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures space between the items */
+}
+
+/*Div that holds the shopcart icon and the container that holds the icon which is used as the button used to open the cart/Basket styling*/
+#shopCartHolder{
+    margin-top: 7px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*Styling the shop cart icon svg*/
+#shopCartHolder  svg{
+    fill: rgb(16, 157, 0);
+    margin-left: 16px; 
+    position: absolute;
+
+}
+
+/*Styling the shop cart icon holder*/
+#openCart{
+    width:45px; 
+    height: 45px; 
+    background-color: rgb(255, 255, 255); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+    margin-left:10px; 
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid rgb(0, 255, 38);
+}
+
+/*Styling the animation added to the shop cart button when Items are added to cart*/
+#openCart.itemsIn{
+    animation: marker 2s linear infinite, multicolor 4s infinite;
+}
+#shopCartHolder  svg.itemsIn{
+    animation: colors 4s linear infinite;
+}
+
+/*rotating the "openCart" div*/
+@keyframes marker{
+    /*0% animation keyframe*/
+    0%{
+        transform: rotate(0deg); /*start of rotation*/
+        box-shadow: 0px 0px 6px  3px rgb(255, 221, 0);/*Starting box-shadow*/
+    }
+    /*50% animation keyframe*/
+    50%{
+        transform: rotate(180deg);/*Halfway of rotation*/
+        box-shadow: 0px 0px 6px  6px rgb(60, 255, 0);/*Halfway box-shadow rgb(0, 255, 208)*/
+    }
+    /*100% animation keyframe*/
+    100%{
+        transform: rotate(360deg);/*ending rotation*/
+        box-shadow: 0px 0px 6px  3px rgb(255, 221, 0);/*resetting box-shadow*/
+    }
+}
+
+/* Color changing animation for "openCart" div */
+@keyframes multicolor {
+    0% {
+        border-top: 2px solid rgb(255, 221, 0);
+        border-bottom: 2px solid rgb(255, 221, 0);
+        border-left: 2px solid rgb(60, 255, 0);
+        border-right: 2px solid rgb(60, 255, 0);
+    }
+    50% {
+        border-top: 2px solid rgb(60, 255, 0);
+        border-bottom: 2px solid rgb(60, 255, 0);
+        border-left: 2px solid rgb(255, 221, 0);
+        border-right: 2px solid rgb(255, 221, 0);
+    }
+    100% {
+        border-top: 2px solid rgb(255, 221, 0);
+        border-bottom: 2px solid rgb(255, 221, 0);
+        border-left: 2px solid rgb(60, 255, 0);
+        border-right: 2px solid rgb(60, 255, 0);
+    }
+}
+
+/*Animation to change color of the svg of the shop cart holder  #3a684b*/
+@keyframes colors {
+    0% {
+        fill: rgb(0, 0, 0);
+    }
+    50% {
+        fill: rgb(60, 255, 0);
+    }
+    100% {
+        fill: rgb(0, 0, 0);
+    }
+}
+
+
+/*Item Basket styling---------------------------------------*/
+/*Styling the main shop cart/ basket container*/
+#Basket{
+    position: fixed;
+    top:21%;
+    right: -100% ; /*5px  -100%*/
+    width: 300px;
+    height: max-content;
+    background-color: hsla(0, 0%, 0%, 0.642);
+    min-width: 255px;
+    border-radius: 10px;
+    border: 2px solid #fdfdfd;
+    z-index: 2; /*Needed to make sure it is at the top of the shop div*/
+    transition: right 1s ease; /*transition added to make it smooth when changes occur.*/
+    overflow: hidden;
+    transition: all 0.3s ease; /*transition added to make it smooth when changes occur.*/
+}
+
+/*Making the div with ID "Basket" responsive at different screen widths*/
+@media (max-width:444px) {
+    #Basket{
+        top:27%;
+    }
+}
+@media (max-width:370px) {
+    #Basket{
+        top:29%;
+    }
+}
+
+/*The class added to Basket when the shop cart Icon is pressed or clicked*/
+#Basket.show {
+    right: 5px; /* Position when visible */
+}
+
+/*Basket div hover effect to make it more appealing to the user.*/
+#Basket:hover{
+    width: 300px;
+    height: 420px;
+    min-width: 290px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+
+/*Div that holds the closing button of the Shop basket / cart*/
+#BasketTitle{
+    color: rgba(68, 253, 0, 0.658);
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    background-color: hsla(0, 0%, 0%, 0.642);
+    font-size: 1.5em;
+    border-bottom: 3px solid #ffffff ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+/* styling close basket svg button container*/
+#closeCart{
+    position: absolute;
+    left: 0;
+    width:45px; 
+    height: 60px;
+    border-right: 2px solid #ccc;
+    background-color: hsla(0, 0%, 0%, 0.642);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+/*styling close basket svg button container hover effect*/
+#closeCart:hover{
+    background-color: #ff0707;
+} 
+
+/*Styling close Basket div svg icon*/
+#closeCart svg{
+    fill: #ccc; 
+}
+
+/*Styling close Basket div svg icon hover effect*/
+#closeCart:hover svg{
+    fill: #ffffff; 
+} 
+
+/*Styling the container that will store the details of each purchasing items with a button to remove them*/
+#CartShowCase{
+    border: 2px solid #ccc;
+    margin: 4px;
+    height: 280px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/*Styling the individual item container for each item added to cart or basket*/
+.CartItem{
+    width: 1000px;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin: 2px;
+}
+
+/*Styling the button used to remove individual items from the basket/cart.*/
+.CartShowCase input[type="button"]{
+    border:2px solid white;
+    background-color:rgba(255, 0, 0, 0.806);
+    color: #ccc;
+    border-radius:4px ;
+    margin: 4px;
+    width:50px;
+    min-width:30px;
+    font-size: 2em;
+}
+
+/*Styling hover effect of the button used to remove individual items from the basket/cart.*/
+.CartShowCase input[type="button"]:hover{
+    background-color: red;
+    color: rgb(255, 255, 255);
+
+}
+
+/*Styling the image container of the item of each item added to the basket/cart.*/
+.CartItem .cartItemImgHolder{
+    width:50px;
+    height: 48px;
+    min-width:50px;
+    min-height: 47px;
+    background-color: rgb(47, 255, 0);
+    margin-top: 4px;
+    border:2px solid white;
+    border-radius:4px ;
+}
+
+/*Styling the image inside image container of the item of each item added to the basket/cart.*/
+.cartItemImgHolder .CartItemImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Styling the details container of the item of each item added to the basket/cart.*/
+.CartItem .CartItemDetails{
+    color: #ffffff;
+    height: 47px;
+    margin: 10px 4px 4px 4px;
+}
+
+/*Styling the total price payable container of the shop basket/cart.*/
+#BasketTotal{
+    display:flex;
+    background-color: white;
+}
+
+/*Styling the span tag containing the total pay of the shop basket/cart.*/
+#Totalpay{
+    color: rgb(0, 0, 0); 
+    margin-left: 5px;
+}
+
+/*Styling the container used to contain the clear cart button and proceed to checkout button.*/
+.CartControl{
+    padding: 5px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*styling the container that stores the buttons and the rotating border divs.*/
+.buttonBox{
+    position: relative;
+    width:100px;
+    height: 35px;
+    border-radius: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+/*Styling the rotating border used to create the rotating border effect*/
+.rotating_border{
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(45deg, rgb(47, 255, 0), rgb(0, 255, 204));
+    animation: rotate 2s linear infinite paused; /*paused until buttonBox div is hovered */
+    display: none;/*Hides initially*/
+}
+
+/*Styling the hovering effect of buttonBox.*/
+.buttonBox:hover .rotating_border{
+    animation-play-state: running;
+    display: flex;
+}
+
+/*Animation to rotate the rotating border div*/
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*Styling the two control buttons (clear cart and proceed to checkout buttons)*/
+#ClearCart, #CartProceed{
+    position: absolute;
+    background-color:rgb(142, 219, 70) ;
+    width: 95%;
+    height: 90%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 100px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/*Styling the two control buttons hovering effect (clear cart and proceed to checkout buttons)*/
+#ClearCart:hover,#CartProceed:hover{
+    background-color:green;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+/*Displayed Items styling-----------------------------------------------------------------------------------------------------------*/
+/*Styling the main containers of each product items in the store display.*/
+.shopitems{
+    border-radius: 10px;
+    min-width: 220px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.913);
+    margin: 20px 5px; /*To keep margin on the top and bottom*/
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    border: 2px solid black; 
+}
+
+/*Styling the hovering effect of the main containers of each product items in the store display.*/
+.shopitems:hover{
+    min-width:250px;
+    height: 355px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+/*Adjusting the #showcase div displaying property to fit its content correctly at device with 900px*/
+@media (max-width: 900px) {
+    #showcase {
+        justify-content: center;
+    }   
+}
+
+
+/*Adjusting the #shop div displaying property to fit its content correctly at device with 900px*/
+@media (max-width: 900px) {
+    #shop {
+        justify-content: center;
+    }   
+}
+
+/*Styling the image displayed for each item displayed in the items showcase of the shop.*/
+.displayed-items{
+    width:100%;
+    height: 60%;
+    object-fit: cover;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    transition: all 0.1s ease;  /*transition added to make it smooth when changes occur.*/
+}
+
+/*Styling the hovering effect of the image displayed for each item displayed in the items showcase of the shop.*/
+.displayed-items:hover{
+    border-bottom: 2px solid white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5), 0 0 20px 15px rgba(0, 0, 0, 0.5);
+}
+
+/*Styling the item title/ product name of each item displayed in the shop.*/
+.displayed-item-titles{
+    color:rgb(0, 0, 0);
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/*Styling the <p> tags and <label> tags of each item in the store.*/
+.shopitems p , .shopitems label{
+    color: rgb(0, 0, 0);
+    margin: 2px;
+}
+
+/*Styling the input field that takes the quantity of the item purchased.*/
+.shopitems input[type="number"] {
+    width: 40px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color:rgba(255, 255, 255, 0.607);
+    color: #000000;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*Styling the input button used to add items  to be purchased to the Basket/cart.*/
+.shopitems input[type="button"]{
+    margin-top: 5px;
+    background-color: green;
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(1, 74, 10);
+    padding:5px;
+    font-size: 13px; 
+    transition: all 0.5s ease;  /*transition added to make it smooth when changes occur.*/
+}
+
+/*Styling the hovering effect of the input button used to add items  to be purchased to the Basket/cart.*/
+.shopitems input[type="button"]:hover{
+    background-color: rgba(7, 255, 7, 0.74);
+    color:black;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+/*Styling the color selecting select element*/
+select.color-select{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    background-color:  rgba(255, 255, 255, 0.607);
+    color: rgb(0, 0, 0);
+    height: 25px;
+}
+
+/*Styling the span element used show the text "Selected color".*/
+.colorDisplay-label{
+    position: absolute;
+    top:83.2%;
+    left:18%;
+    color:rgb(0, 0, 0);
+}
+
+/*Styling the div used to display the color selected for the purchasing item*/
+.colorDisplay{
+    position: absolute;
+    top:81.5%;
+    left:67%;
+    width: 20px;
+    height: 20px;
+    display: inline-block; 
+    margin-top: 5px;
+    border-radius: 2px;
+    border: 1px solid rgb(0, 0, 0); 
+}
+
+/*Back to top button------------------------------------------------------------------------------------------------------------------------*/
+
+/*Styling the back to top button container*/
+#BackToTop{
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+}
+
+/*Styling the back to top link*/
+#BackToTopLink{
+    text-decoration: none;
+}
+
+/*Styling the back to top button div*/
+#BackToTopBtn{
+    width:140px; 
+    height: 30px; 
+    color: white;
+    font-weight: bold; 
+    font-size: 20px;
+    margin: 10px 0px;   
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+/*Styling the back to top button div hover effect.*/
+#BackToTopBtn:hover{
+    background-color:rgba(0, 0, 0, 0.607);
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    color: white;
+}
+

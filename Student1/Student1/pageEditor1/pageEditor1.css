@@ -1,0 +1,350 @@
+/*Adding styling to all body elements*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 344px;
+}
+/*Styling the header and footer */
+header, footer {
+    background-color: #ffffff;
+    color: rgb(16, 157, 0);
+    text-align: center;
+}
+
+/*Styling the divs with class container */
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/*Styling the main tag by adding an image*/
+main{
+    background-image: url(logo/main1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header Section styling-------------------------------------------------------------------------------------*/
+header{
+    position: sticky; /*Making the header sticky to the top.*/
+    top: 0;
+    z-index: 10; /*Makes the header is on top of other elements */
+    max-height: 122px;
+    border-bottom: 2px solid rgb(16, 157, 0);
+}
+
+/*Styling the header navigation system*/
+header #Nav_bar a{
+    color: rgb(16, 157, 0);
+    margin: 0 10px;
+    text-decoration: none;
+    transition: border-bottom 0.1s ease;
+}
+
+/*Making the navigation responsive*/
+header #Nav_bar a:hover{
+    border-bottom: 2px solid rgb(16, 157, 0);
+}
+
+/*Making the both the container type elements display flex to make it responsive*/
+header div.container, #Nav_bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Make the content in the headers' div container have a space in between*/
+header div.container{
+    justify-content: space-between;
+    background-color: white;
+}
+
+/*Making a border appear at the bottom of the container below as the header's border disappear at this specific width.*/
+@media (max-width: 829px){
+    header div.container{
+        border-bottom: 2px solid rgb(16, 157, 0);
+    }
+    header{
+        border: none;
+    }
+}
+
+/* Style the Title of the webpage*/
+header div.container h1{
+    text-align: left;
+    display:block;
+} 
+
+/*Style the webpage header navigation links */
+header div.container #Nav_bar a{
+    display: block;
+    width: max-content;
+}
+/*Logo image container-----------------------------------------------------------*/
+#Logo-container{
+    margin: 0px 0px 20px 0px;
+    display: block;
+    width:100px;
+    height: 100px;
+    background-color:darkgreen; 
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+}
+
+/*Styling the logo image*/
+#logo{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Menu button*/
+#menubtn{
+    display: none;
+    transition: border 0.1s ease;
+}
+
+/*Making  the menu button  responsive*/
+#menubtn:hover{
+    font-weight: bold;
+    border: 2px solid rgb(16, 157, 0);
+}
+
+/*Menu button that appears at device width 768px*/
+@media (max-width: 768px) {
+    #Nav_bar {
+        display: none;
+    }
+
+    #menubtn {
+        display: block;
+        background-color: #ffffff;
+        color: rgb(16, 157, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+}
+/*Dropdown*/
+#dropdown{
+    display: none;
+}
+
+/*Dropdown content styling*/
+.dropdown-content a{
+        display:block;
+        text-decoration: none;
+        color: rgb(16, 157, 0);
+        background-color: rgba(255, 255, 255, 0.925);
+}
+/*Making dropdown content responsive*/
+.dropdown-content a:hover{
+    background-color:rgb(16, 157, 0);
+    color:#ffffff;
+    font-weight: bold;
+} 
+
+/*Footer content styling-------------------------------------------------------------------------------------------------------------*/
+footer {
+    color: white;
+    border-top: 2px solid rgb(16, 157, 0);
+    background-color: rgb(16, 157, 0);
+}
+
+#footer-content p {
+    margin: 0;
+}
+
+#footer-content {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#footer-content a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-links a {
+    display: block; /*Making the links display as block*/
+}
+
+/*Footer logo container styling*/
+#footerlogo {
+    height: 140px;
+    width: 140px;
+    margin: 35px 5px;
+}
+
+/*Styling the logo*/
+#footerlogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Styling the footer slogan*/
+#footerSlogan {
+    width: 40%;
+    height: fit-content;
+    text-align: justify;
+    margin: 15px;
+}
+/*Styling the footer links section*/
+#footer-links {
+    padding: 0px 20px;
+    margin: 15px;
+    width: 20%;
+    text-align: left;
+    border-left: 2px solid white;
+}
+
+/*Styling the contact div*/
+#contact {
+    width: 15%;
+    height: fit-content;
+}
+
+#contact h3 {
+    text-align: right;
+}
+
+/*Styling the svgs */
+#contact svg {
+    display: inline-block;
+    fill: white;
+}
+
+/*Styling the svgs in the Svg-container div*/
+#Svg-container {
+    text-align: right;
+}
+
+/*Styling the bottom content section of the footer*/
+#bottom-content {
+    width: 100%;
+}
+
+/*Making the footer responsive to different device screen sizes*/
+
+@media (max-width: 1026px){
+    #contact{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        border-left: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #footer-content {
+        flex-direction: column; /*Making the content appear in one column*/
+        align-items: center;
+    }
+
+    #footerSlogan, 
+    #footer-links, 
+    #contact, 
+    #bottom-content {
+        width: 100%; /*Making the content take up 100% of the screen width*/
+        text-align: center;
+        margin: 10px 0;
+        border-left: none;
+    }
+
+    #footer-links{
+        border-top: 2px solid white;
+    }
+
+    #footer-links a{
+        margin-top: 10px;
+    }
+
+    #contact h3, 
+    #Svg-container {
+        text-align: center;
+    }
+
+    #Svg-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer-links {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+/*Main content-------------------------------------------------------------------------------------------------------------*/
+
+/*Styling the main profile container*/
+#profile-container{
+    Width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+/*Styling the container that contains the content of the profile*/
+#profile{
+    width:400px;
+    height: fit-content;
+    border: 2px solid black;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.432);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+
+/*Styling to make the profile container responsive*/
+#profile:hover{
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.596);
+}
+
+/*Styling the image container*/
+#img-container{
+    width: 100%;
+    height: 300px;
+}
+
+/*Styling the image inside the image container*/
+#img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+/*Styling the information container and the information displayed in the profile section*/
+#Info-container{
+    text-align: center;
+}
+
+#Info-container p{
+    font-size: 15px;
+}
+
+#Info-container hr{
+    width: 80%;
+    border: 2px solid rgba(16, 157, 0, 0.842);
+    border-radius: 10px;
+}
+
+#Info-container h3, #Info-container h4{
+    color:rgb(14, 129, 1);
+}
+
+

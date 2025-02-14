@@ -1,0 +1,138 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #c9ebd7; /* Light green background */
+    position: relative;
+}
+
+/* Apply box-sizing border-box to include padding and border in the element's total width and height */
+input, select, textarea {
+    box-sizing: border-box;
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* adding styling to the rating radio buttons */
+.rating{
+    display: flex;
+    gap: 10px; 
+}
+
+.rating input[type = "radio"] + label{
+    margin-right: 10px;
+}
+/* Style for text areas */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #4caf50; /* Green border for textarea */
+    border-radius: 4px;
+}
+
+/* Style for input fields and select boxes */
+input, select {
+    /* width: 100%; */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4caf50; /* Green border for inputs and select */
+    border-radius: 4px;
+    /* Ensure padding and border are included in width and height */
+    box-sizing: border-box;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50; /* Green background for the buttons */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+#previewSection {
+    display: none;
+    background-color: #ffffff; /* White background for the preview section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%; /* Adjust the width of the preview section */
+    margin: auto; /* Center the preview section */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Make sure buttons are positioned correctly */
+}
+
+#previewSection h2 {
+    text-align: center;
+    color: #004d40; /* Dark green text for the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+#previewSection p {
+    margin: 10px 10px;
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Dark text color */
+}
+
+#previewSection button {
+    background-color: #4caf50; /* Green background for the buttons */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px 10px; /* Add space around the buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
+}
+
+#previewSection button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+#previewMobileSection {
+    display: none; /* Hide by default */
+    margin-top: 10px;
+}
+
+#previewMobileSection strong {
+    color: #004d40; /* Dark green text for mobile number label */
+}
+
+.via-SMS {
+    display: none;
+}
+
+.notification {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4f4f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.notification.success {
+    background-color: #4caf50;
+}

@@ -1,0 +1,199 @@
+
+*{ /*This applies to all elements*/
+    padding: 0;
+    margin:0;
+    box-sizing: border-box; /* Adjust element to calculate width and height including both border and padding without considering it differently.*/
+}
+
+/*Adding styling to all body elements*/
+body{
+    min-height: 100vh; /*Take up 100% of the viewport height.*/
+    background-color: #2e2e2e;
+    overflow: hidden;
+}
+
+/* CSS for the video-container div (video)---------------------------------------------------------------------------------*/
+#video-container {
+    position: relative; /*Position relative is set here so it becomes the parent to "Text-content" div */
+    width: 100%;
+    height: 100vh; /*Take up 100% of the viewport height.*/
+    opacity: 0.9;/* To make the background a bit dim (less bright)*/
+    min-width: 300px; /*Minimum width is given to 300px to stop the element from shrinking any further.*/
+}
+
+/*Styling the video*/
+#videoPlayer {
+    object-fit: cover; /*fitting the video to cover the entire window*/
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Styling to the center container and text inside it---------------------------------------------------------------------*/
+
+#Text-content{
+    display: none; /*Initially hide*/
+    position: absolute; /*positioned relative to "video-container" div*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*moves the element up by 50% of its own height and left by 50% of its own width.*/
+    width: 60%;
+    min-width: 300px; /*Minimum width of shrinking*/
+    margin: 10px auto 10px auto;
+    padding: 10px;
+}
+/*Styling the text content of the splash content*/
+h1, p, hr, ul, ul li {
+    color: white;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 #000, /* top-left shadow */
+     1px -1px 0 #000, /* top-right shadow */
+    -1px  1px 0 #000, /* bottom-left shadow */
+     1px  1px 0 #000; /* bottom-right shadow */
+}
+
+/*Styling the h1 tag*/
+h1{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+/*Styling the p,ul, li tags*/
+p, ul li{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+/*Setting margin to p tag*/
+p{
+    margin: 10px;
+}
+
+
+/*Styling the hr tag*/
+hr{
+    width:60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+}
+
+/*Styling the li tags inside the ul tag*/
+ul li{
+    display: inline-block; /*making the list items displaying in inline block*/
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*Adjust the font-size of the text containing elements upto max-width of 426px */
+@media (max-width:426px) {
+    p, ul li {
+        font-size: 14px;
+    }
+    h1{
+        font-size:40px; 
+    }
+}
+
+
+/* Styling done to create the Loading circle------------------------------------------------------------------------------*/
+
+/*Stying the main container of the loading circle*/
+#loading-main-container{
+    width: 100%;
+    height: 130px;
+    
+    /*down below properties together can center element inside it both horizontally and vertically*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Stying the sub-container of the loading circle*/
+#loading-sub-container{
+    width: 200px;
+    height: 120px;
+    position: relative; /*Position relative is set here so it becomes the parent to "loading" span*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Styling the "loading" text.*/
+span#loading{
+    position: absolute; /*positioned relative to "loading-sub-container" div */
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 2px; /*To keep a 2px space between letters*/
+    text-shadow:
+    -1px -1px 0 #000, /* top-left shadow */
+     1px -1px 0 #000, /* top-right shadow */
+    -1px  1px 0 #000, /* bottom-left shadow */
+     1px  1px 0 #000; /* bottom-right shadow */
+}
+
+/*Styling loading circle div */
+#loading-ring{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /*Makes a circle*/
+    animation: ring 2s linear infinite;  /*animation name= 'ring' duration='2s' time function='linear'(consistent speed) iterations ='infinite'.*/
+}
+
+/*rotating the "loading-ring" div*/
+@keyframes ring{
+    /*0% animation keyframe*/
+    0%{
+        transform: rotate(0deg); /*start of rotation*/
+        box-shadow: 3px 3px 3px orange;/*Starting box-shadow*/
+    }
+    /*50% animation keyframe*/
+    50%{
+        transform: rotate(180deg);/*Halfway of rotation*/
+        box-shadow: 1px 5px 5px rgb(0, 255, 17);/*Halfway box-shadow*/
+    }
+    /*100% animation keyframe*/
+    100%{
+        transform: rotate(360deg);/*ending rotation*/
+        box-shadow: 3px 3px 3px orange;/*resetting box-shadow*/
+    }
+}
+
+
+/*Styling the text content and loading ring content to suit mobile screens*/
+@media (max-width: 426px) {
+    #Text-content {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p, ul li {
+        font-size: 12px;
+    }
+
+    #loading-main-container {
+        height: 100px;
+    }
+
+    #loading-sub-container {
+        width: 150px;
+        height: 100px;
+    }
+
+    #loading-ring {
+        width: 75px;
+        height: 75px;
+    }
+    #loading{
+        font-size: 10px;
+    }
+}

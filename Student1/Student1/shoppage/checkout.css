@@ -1,0 +1,658 @@
+body {
+    /*Adding styling to all body elements*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 344px;
+}
+/*Styling the header and footer */
+header, footer {
+    background-color: #ffffff;
+    color: rgb(16, 157, 0);
+    text-align: center;
+}
+
+/*Styling the main tag container*/
+main{
+    background-image: url('img/load.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Styling the divs with class container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Header Section styling-----------------------------------------------------------------------------------------------------------------*/
+
+header{
+    position: sticky; /*Making the header sticky to the top*/
+    top: 0;
+    z-index: 1; /*Makes the header is on top of other elements */
+    max-height: 122px;
+    border-bottom: 2px solid rgb(16, 157, 0);
+}
+/*Styling the header navigation system*/
+header #Nav_bar a{
+    color: rgb(16, 157, 0);
+    margin: 0 10px;
+    text-decoration: none; /*Removing the underline from the links*/
+}
+
+/*Making the navigation responsive*/
+header #Nav_bar a:hover{
+    border-bottom: 2px solid rgb(16, 157, 0);
+}
+
+/*Making the both the container type elements display flex to make it responsive*/
+header div.container, #Nav_bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Make the content in the headers' div container have a space in between*/
+header div.container{
+    justify-content: space-between;
+    background-color: white;
+}
+
+
+/*Making a border appear at the bottom of the container below as the header's border disappear at this specific width.*/
+@media (max-width: 829px){
+    header div.container{
+        border-bottom: 2px solid rgb(16, 157, 0);
+    }
+    header{
+        border: none;
+    }
+}
+/* Style the Title of the webpage*/
+header div.container h1{
+    text-align: left;
+    display:block;
+} 
+
+/*Style the webpage header navigation links */
+header div.container #Nav_bar a{
+    display: block;
+    width: max-content;
+}
+/*Logo image container styling---------------------------*/
+#Logo-container{
+    margin: 0px 0px 20px 0px;
+    display: block;
+    width:100px;
+    height: 100px;
+    background-color:darkgreen; 
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+}
+/*Making the logo cover the entire container allocated to it*/
+#logo{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Menu button that is made to appear when the device-screen width reaches the mobile width. Done inorder to replace the Nav_bar links content.*/
+#menubtn{
+    display: none;
+}
+
+/*Making  the menu button  responsive*/
+#menubtn:hover{
+    font-weight: bold;
+    border: 2px solid rgb(16, 157, 0);
+}
+
+/*Menu button that appears at device width 768px*/
+@media (max-width: 768px) {
+    #Nav_bar {
+        display: none; /*Hiding the Nav_bar and the contents inside it.*/
+    }
+
+    #menubtn {
+        display: block;
+        background-color: #ffffff;
+        color: rgb(16, 157, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer; /*Making the cursor to be a pointer*/
+    }
+
+}
+/*Dropdown create to replace the "Nav_bar" content when the width reaches mobile width*/
+#dropdown{
+    display: none; /*Initially hidden*/
+}
+
+/*Styling the dropdown content of the dropdown div*/
+.dropdown-content a{
+        display:block;
+        text-decoration: none;
+        color: rgb(16, 157, 0);
+        background-color: rgba(255, 255, 255, 0.925);
+}
+
+/*Making dropdown content responsive*/
+.dropdown-content a:hover{
+    background-color:rgb(16, 157, 0);
+    color:#ffffff;
+    font-weight: bold;
+} 
+
+/* Adjusting the min width of header, footer, main, body element at max-width of the screen '344px'*/
+@media (max-width: 344px) {
+    header,footer, main{
+        min-width: 344px;
+    }
+    body{
+        min-width: 344px;
+    }
+}
+
+
+/*Footer content styling-------------------------------------------------------------------------------*/
+
+footer {
+    color: white;
+    border-top: 2px solid rgb(16, 157, 0);
+    background-color: rgb(16, 157, 0);
+}
+
+#footer-content p {
+    margin: 0;
+}
+
+#footer-content {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#footer-content a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-links a {
+    display: block; /*Making the links display as block*/
+}
+
+/*Footer logo container styling*/
+#footerlogo {
+    height: 140px;
+    width: 140px;
+    margin: 35px 5px;
+}
+
+/*Styling the logo*/
+#footerlogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Styling the footer slogan*/
+#footerSlogan {
+    width: 40%;
+    height: fit-content;
+    text-align: justify;
+    margin: 15px;
+}
+/*Styling the footer links section*/
+#footer-links {
+    padding: 0px 20px;
+    margin: 15px;
+    width: 20%;
+    text-align: left;
+    border-left: 2px solid white;
+}
+
+/*Styling the contact div*/
+#contact {
+    width: 15%;
+    height: fit-content;
+}
+
+#contact h3 {
+    text-align: right;
+}
+
+/*Styling the svgs */
+#contact svg {
+    display: inline-block;
+    fill: white;
+}
+
+/*Styling the svgs in the Svg-container div*/
+#Svg-container {
+    text-align: right;
+}
+
+/*Styling the bottom content section of the footer*/
+#bottom-content {
+    width: 100%;
+}
+
+/*Making the footer responsive to different device screen sizes*/
+
+@media (max-width: 1026px){
+    #contact{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        border-left: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #footer-content {
+        flex-direction: column; /*Making the content appear in one column*/
+        align-items: center;
+    }
+
+    #footerSlogan, 
+    #footer-links, 
+    #contact, 
+    #bottom-content {
+        width: 100%; /*Making the content take up 100% of the screen width*/
+        text-align: center;
+        margin: 10px 0;
+        border-left: none;
+    }
+
+    #footer-links{
+        border-top: 2px solid white;
+    }
+
+    #footer-links a{
+        margin-top: 10px;
+    }
+
+    #contact h3, 
+    #Svg-container {
+        text-align: center;
+    }
+
+    #Svg-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer-links {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Checkout container and progress bar styling ------------------------------------------------------------------------------------------------------*/
+
+/*Styling the main container that stores the checkout content.*/
+#Checkout{
+    padding: 0;
+    background-image: url('img/dark2.jpg');
+    background-size:cover; /* This will stretch the image to cover the element */
+    background-position: center; /* Optional: Center the image */
+    background-repeat: no-repeat;/* Optional: Prevent the image from repeating */
+}
+
+/*Styling the main container that stores the progress of the checkout form completion.*/
+#CustomerMessage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+/*Styling the sub-container that stores the progress of the checkout form completion.*/
+#CompletionStatus{
+    padding: 5px;
+    width: 94%;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.800);
+    border-radius:10px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.5s ease, width 0.5s ease, font-size 0.5s ease; /*Making the transition of background-color, width, font-size smooth during the hover of the container element. */
+}
+
+/*Styling the hover effect of the sub-container that stores the progress of the checkout form completion.*/
+#CompletionStatus:hover{
+    background-color: white;
+    width:95%;
+    font-weight: bold;
+    font-size: 18px;
+}
+/*Styling the  h1 and p tags of the "CompletionStatus" div*/
+#CompletionStatus h1, #CompletionStatus p{
+    margin: 0;
+}
+
+/*Styling the container div of the */
+#loadercontainer{
+    width: 30%; 
+    height: 20px; 
+    border: 2px solid black; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    margin: 2px auto;
+}
+
+/*Styling the loader progress bar*/
+#loader{
+    width: calc(100%/3); 
+    height:20px; 
+    overflow: hidden;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+/*Styling the loading image*/
+#loader > img{
+    width:100%; 
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+/*Main content -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*
+two divs are created, 
+one div (faketop) is used to create a fake top of the webpage so that the webpage maintains positions of main content elements at the intended position.
+the second div(faketop1) is used to create a space in "Checkout" div so that the Loading progress bar and form completion status is visible at the top clearly without having the first form field underneath it. 
+*/ 
+/*Styling both the divs at the top*/
+#faketop, #faketop1 {  
+    width: 100%; 
+    height: 110px;   
+}
+
+/*Styling the  faketop div to take up the top most part of the webpage*/
+#faketop{
+    height: 120px;
+    display: none;
+}
+
+/*Styling the second div to adjust height to suit different device widths*/
+@media (max-width: 444px) {
+    #faketop1 {
+        height: 150px;
+    }
+}
+@media (max-width: 383px) {
+    #faketop1 {
+        height: 210px;
+    }
+}
+
+
+
+
+
+/* Form Display styling--------------------------------------------------------------*/
+
+/*Styling the main container for the forms to be located at the center*/
+#Checkout-Fields{
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Styling the all individual input fields*/
+.info-fields{
+    min-width: 270px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 2px solid rgb(82, 169, 2); 
+    margin: 0px 10px 10px 10px;
+    transition: background-color 0.5s ease;
+}
+
+/*Styling the hover effect of all individual input fields*/
+.info-fields:hover{
+    background-color: rgba(0, 0, 0, 0.71);
+}
+
+/*Styling the form heading of all the 3 form sections*/
+.info-field-title{
+    width:100%;
+    height: auto; 
+    background-color: rgb(82, 169, 2); 
+    padding: 10px; 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+/*Styling the note stating the required fields symbol*/
+.important-notice{
+    text-align: right; 
+    margin: 10px 10px 0px 0px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*Styling the form seperator*/
+.info-fields > hr{
+    border:1px solid rgb(82, 169, 2); 
+}
+
+/*Styling the span tag that contains the required stating symbol*/
+.required{
+    color:red;
+    margin: 4px;
+}
+
+/*Info gathering sections -----------------------------------------------------------------------------------------------------------------*/
+
+/*Styling the labels and input section.*/
+.info-section{
+    padding: 10px 20% 2px; 
+    object-fit: contain; /* Make all the content inside fit into the div (height : fit-content is also the same)*/
+}
+
+/*Styling all the Labels*/
+.Labels{
+    font-size: larger;
+    width: fit-content; /* Ensures the width is just enough to contain the text*/ 
+    display: block; 
+
+}
+
+/*Styling all the input tags*/
+.Inputfields{
+    width:100%;
+    object-fit: contain;
+    display: block;
+    padding: 0;
+    margin-bottom: 3px;
+} 
+
+
+/*Button styling ---------------------------------------------------------------------------------------------------------------------*/
+/*Styling the button section of all the 3 form section*/
+.button-section{
+    padding: 0px 10%; 
+    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/*Styling the button section of the Checkout-summary section.*/
+#CompletePaymentSec{
+    padding: 0px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Styling all the button sections to adjust at device width 366px*/
+@media (max-width: 366px) {
+    #CompletePaymentSec{
+        padding: 0;
+    }
+    .button-section{
+        padding: 0;
+    }
+}
+
+/*Styling the all buttons of the checkout page*/
+.CheckOutBtns{
+    background-color:rgb(82, 169, 2); 
+    width: 150px;
+    height: 35px;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border 0.3s ease, width 0.3s ease;
+}
+
+/*Styling the hover effect of all buttons of the checkout page*/
+.CheckOutBtns:hover{
+    background-color:green;
+    border: 2px solid rgb(142, 219, 70);
+    width: 155px;
+}
+
+
+/* Order summary ---------------------------------------------------------------------------------------------------------------------*/
+
+/*Styling the checkout summary section of the checkout page.*/
+#Checkout-Summary{
+    height: 480px;
+}
+
+/*Styling the containers for the reference number, order total and the title "Order Items".*/
+.Summary-Titles{
+    background-color: rgb(5, 166, 30);
+    width: 90%;
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center; /* Aligns items horizontally */
+    align-items: center; /* Aligns items vertically */
+    border-radius:10px ;
+}
+
+/*Styling the h3 element inside the "Summary-Titles" div */
+.Summary-Titles > h3{
+    margin: 0;
+}
+
+
+/*Styling the container that stores the purchased items so it can be viewed by the user.*/
+#Summary{
+    margin: 4px 5%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 0px;
+    object-fit: contain;
+    overflow-y: auto;
+    height:130px;
+}
+
+/*Styling the container that stores all items to be purchased.*/
+.OrderItems{
+    width: 100%;
+    border-bottom: 2px solid white ;
+}
+
+/* Payorder decision styling----------------------------------------------------------------------------------------------------------*/
+
+/*Styling the popup message main container*/
+#PopupMessage{
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7); /* Translucent background */
+    z-index: 2; /* Make sure it's on top of other content */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/*Styling the popup message sub-container*/
+.Payorder{
+    min-width: 270px;
+    max-height: 450px ;
+    background-color: rgb(0, 0, 0); 
+    color: white; margin: 5px; 
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+/*Styling  the  back to shop button margin bottom which will create a 9px space at the bottom.*/
+#Backtoshop{
+    margin-bottom: 9px;
+}
+
+
+
+
+/*Back to top button-------------------------------------------------------------------------------------------------*/
+
+
+/*Styling the back to top button container*/
+#BackToTop{
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+}
+
+/*Styling the back to top link*/
+#BackToTopLink{
+    text-decoration: none;
+}
+
+/*Styling the back to top button div*/
+#BackToTopBtn{
+    width:140px; 
+    height: 30px; 
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;  
+    margin: 10px 0px;   
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    border-top: 3px solid rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(0, 0, 0);
+    background-color:rgb(62, 254, 33);
+}
+
+/*Styling the back to top button div hover effect.*/
+#BackToTopBtn:hover{
+    background-color:rgba(0, 0, 0, 0.607);
+    border-top: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    color: rgb(62, 254, 33);
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Defines the document type and sets the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to make the website responsive -->
+    <link rel="stylesheet" href="profile1.css"> <!-- Links to an external CSS file for styling -->
+    <link rel="icon" href="logo/remove1.1.png" type="image/png"> <!-- Sets a favicon for the webpage -->
+    <title>Gaia Radiance</title> <!-- Sets the title of the webpage -->
+</head>
+<body>
+    <header id="Header"> <!-- Defines the header section of the page -->
+        <div class="container"> <!-- Container for header content -->
+            <div id="Logo-container"> <!-- Container for the logo -->
+                <img id="logo" src="logo/img1.jpg" alt="Gaia Radiance logo"> <!-- Displays the logo image -->
+            </div>
+            <nav id="Nav_bar"> <!-- Navigation bar -->
+                <a href="../../../Student2/Student2/Home/home.html">Home</a> <!-- Link to the Home page -->
+                <a href="../../../Student4/Student4/Gallery/Gallery.html">Gallery</a> <!-- Link to the Gallery page -->
+                <a href="#">User Profile</a> <!-- Link to the User Profile page -->
+                <a href="../../../Student4/Student4/sitemap/sitemap.html">Sitemap</a> <!-- Link to the Sitemap page -->
+                <a href="../../../Student1/Student1/shoppage/shop.html">Shop</a> <!-- Link to the Shop page -->
+                <a href="../team/team.html">About Us</a> <!-- Link to the About Us page -->
+            </nav>
+            <h1>Gaia Radiance</h1> <!-- Main heading of the page -->
+            <button id="menubtn" onclick="menuclicked()">Menu</button> <!-- Button for the menu with an onclick event -->
+        </div>
+        <div id="dropdown"> <!-- Dropdown menu container -->
+            <nav class="dropdown-content"> <!-- Dropdown content -->
+                <a href="../../../Student2/Student2/Home/home.html">Home</a> <!-- Link to the Home page -->
+                <a href="../../../Student4/Student4/Gallery/Gallery.html">Gallery</a> <!-- Link to the Gallery page -->
+                <a href="#">User Profile</a> <!-- Link to the User Profile page -->
+                <a href="../../../Student4/Student4/sitemap/sitemap.html">Sitemap</a> <!-- Link to the Sitemap page -->
+                <a href="../../../Student1/Student1/shoppage/shop.html">Shop</a> <!-- Link to the Shop page -->
+                <a href="../team/team.html">About Us</a> <!-- Link to the About Us page -->
+            </nav>
+        </div>
+    </header>
+    
+    <main> <!-- Main content of the page -->
+        <div class="profile-container"> <!-- Container for profile section -->
+            <div class="container1"> <!-- Inner container -->
+                <div class="user-profile"> <!-- User profile section -->
+                    <h1>User Profile</h1> <!-- Heading for the User Profile section -->
+                    <div id="prompt-container"></div> <!-- Container for prompts -->
+                    <input type="text" id="user-input"> <!-- Input field for user input -->
+                    <div class="buttons"> <!-- Container for navigation buttons -->
+                        <button id="prevButton">Previous</button> <!-- Button to navigate to the previous prompt -->
+                        <button id="nextButton">Next</button> <!-- Button to navigate to the next prompt -->
+                    </div>
+                    <div class="progress"> <!-- Container for progress bar -->
+                        <div id="progress-bar" class="progress-bar"> <!-- Progress bar -->
+                            <span id="progress-percent">0%</span> <!-- Display progress percentage -->
+                        </div>
+                    </div>
+                    <div id="steps" class="steps"></div> <!-- Container for step indicators -->
+                    <div id="output" class="output"></div> <!-- Container for output display -->
+                </div>
+            </div>
+        
+            <div id="promptModal" class="modal"> <!-- Modal for end of profile setup prompt -->
+                <div class="modal-content"> <!-- Modal content -->
+                    <p>You've reached the end of the profile setup. Would you like to see a summary?</p> <!-- Prompt message -->
+                    <button id="showSummaryButton">Next</button> <!-- Button to proceed to the summary -->
+                </div>
+            </div>
+        
+            <div id="summaryModal" class="modal"> <!-- Modal for summary display -->
+                <div class="modal-content"> <!-- Modal content -->
+                    <div id="summaryContent"></div> <!-- Container for summary content -->
+                    <button id="submitButton">Submit</button> <!-- Button to submit the profile -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer> <!-- Footer section -->
+        <div class="container" id="footer-content"> <!-- Container for footer content -->
+            <div id="footerlogo"> <!-- Container for footer logo -->
+                <img src="logo/remove1.1.png" alt="footer logo of Gaia Radiance"> <!-- Footer logo image -->
+            </div>
+            <div id="footerSlogan"> <!-- Container for footer slogan -->
+                <h1>Gaia Radiance</h1> <!-- Footer heading -->
+                <p>"Preserving Nature's Brilliance for Future Generations."</p><br> <!-- Footer slogan -->
+                <p>At Gaia Radiance, we're dedicated to preserving life on land. Our mission is to conserve diverse ecosystems and ensure a thriving future for all beings. Through education, advocacy, and initiatives, we highlight the importance of biodiversity and inspire collective action for a greener Earth. Join us in protecting nature's brilliance for generations to come.</p> <!-- Footer mission statement -->
+            </div>
+            <div id="footer-links"> <!-- Container for footer links -->
+                <a href="../../../Student2/Student2/Home/home.html">Home</a><br> <!-- Link to the Home page -->
+                <a href="../../../Student4/Student4/Gallery/Gallery.html">Gallery</a><br> <!-- Link to the Gallery page -->
+                <a href="#">User Profile</a><br> <!-- Link to the User Profile page -->
+                <a href="../../../Student4/Student4/sitemap/sitemap.html">Sitemap</a><br> <!-- Link to the Sitemap page -->
+                <a href="../../../Student1/Student1/shoppage/shop.html">Shop</a><br> <!-- Link to the Shop page -->
+                <a href="../team/team.html">About Us</a><br> <!-- Link to the About Us page -->
+                <a href="../../../Student2/Student2/Feedback/feedback.html">FeedBack/Comments</a><br> <!-- Link to the Feedback/Comments page -->
+                <a href="../PageEditor3/PageEditor.html">Page Editor</a> <!-- Link to the Page Editor -->
+            </div>
+            <div id="contact"> <!-- Container for contact information -->
+                <h3>Contact us @</h3> <!-- Contact heading -->
+                <div id="Svg-container"> <!-- Container for social media icons -->
+                    <!-- SVG icons for social media links -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="35px" height="35px">
+                        <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"/>
+                    </svg>
+                </div>
+            </div>
+            <div id="bottom-content"> <!-- Container for bottom footer content -->
+                <p>All icon, images, and videos except for the Logo are the properties of their respective owners.</p> <!-- Disclaimer about content ownership -->
+                <hr>   
+                <p>Copyright &copy; 2024 Gaia Radiance. All rights reserved.</p> <!-- Copyright information -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="profile1.js"></script> <!-- Links to an external JavaScript file -->
+</body>
+</html>
